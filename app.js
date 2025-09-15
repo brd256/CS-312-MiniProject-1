@@ -17,7 +17,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // a temporary array stoing posts in memory
 let posts = [];
 
+
+
+
 // home route: display all posts with optional filtering
+
 app.get('/', (req, res) => {
   //get category filter from query parameter
   const filter = req.query.filter;
@@ -27,7 +31,11 @@ app.get('/', (req, res) => {
   res.render('index', { posts: filteredPosts });
 });
 
+
+
+
 // route to create new posts
+
 app.post('/create', (req, res) => {
   // get data from the form 
   const { title, content, author, category } = req.body;
@@ -47,6 +55,9 @@ app.post('/create', (req, res) => {
   res.redirect('/');
 });
 
+
+
+
 // Route to load edit form for a post
 app.get('/edit/:id', (req, res) => {
   // find post by id
@@ -57,7 +68,11 @@ app.get('/edit/:id', (req, res) => {
   res.render('edit', { post });
 });
 
+
+
+
 // route rto handle sumbison 
+
 app.post('/edit/:id', (req, res) => {
   // get data from the edit form
   const { title, content, author, category } = req.body;
@@ -80,13 +95,20 @@ app.post('/edit/:id', (req, res) => {
   res.redirect('/');
 });
 
+
+
+
 // route to delete a post using the id
+
 app.get('/delete/:id', (req, res) => {
   // remove post from array
   posts = posts.filter(p => p.id != req.params.id);
   // redirect...
   res.redirect('/');
 });
+
+
+
 
 // starting the express server on defined porrt = 3000
 app.listen(PORT, () => {
