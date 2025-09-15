@@ -2,25 +2,32 @@
 body {
   margin: 0;
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  /*black text color*/
+  color: #000000;
 }
 
 /* Headings */
 h1, h2, h3 {
-  color: #2c3e50;
+  color: #000000;
 }
 
-/* Forms */
+/* styling for all forms */
 form {
+  /* set form background to white*/
   background-color: #fff;
+  /* add padding inside the form*/
   padding: 15px;
+  /* add space below the form*/
   margin-bottom: 30px;
+  /* rounded corners*/
   border-radius: 8px;
+  /* subtle shadow effect*/
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Form elements styling*/
 form input,
 form textarea,
 form select {
@@ -33,6 +40,7 @@ form select {
   font-size: 1em;
 }
 
+/* styling for form buttons */
 form button {
   background-color: #3498db;
   color: white;
@@ -43,11 +51,12 @@ form button {
   font-weight: bold;
 }
 
+/* hover effect for form buttons */
 form button:hover {
   background-color: #2980b9;
 }
 
-/* Posts */
+/* Posts styling*/
 .post {
   background-color: #fff;
   padding: 15px;
@@ -57,16 +66,19 @@ form button:hover {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* remove top margin for post titles */
 .post h3 {
   margin-top: 0;
 }
 
+/* styling for the data displayed in posts */
 .post small {
   display: block;
   margin-top: 10px;
   color: #777;
 }
 
+/* styling for edit and delete links in posts */
 .post a {
   margin-right: 10px;
   text-decoration: none;
@@ -74,6 +86,7 @@ form button:hover {
   font-weight: bold;
 }
 
+/* hover effect for edit and delete links */
 .post a:hover {
   text-decoration: underline;
 }
@@ -86,7 +99,7 @@ form#filter-form {
   margin-bottom: 20px;
 }
 
-/* Responsive layout */
+/* media screen size handling */
 @media (max-width: 600px) {
   body {
     padding: 10px;
